@@ -1,19 +1,20 @@
 === Emerge Mono SEO ===
 Contributors: emergemono
-Stable tag: 0.5.3
+Stable tag: 0.5.4
 Requires at least: 6.0
+Tested up to: 7.1
 Requires PHP: 7.4
 License: GPLv2 or later
 
-SEO・MEO・LLMO・AIOを一体管理するEmerge Monoシリーズの無料拡張プラグイン。
+Integrated SEO, local search, AI discovery and structured-data management for WordPress.
 
 == Description ==
 
-単体のWordPressで利用でき、Emerge Mono CoreまたはJournalが有効な場合は専用の文書コンテキストと連携します。
+Emerge Mono SEO works as a standalone WordPress plugin and integrates with the document context provided by Emerge Mono Core or Journal when either product is active.
 
 == Changelog ==
 
-= 0.5.3 =
+= 0.5.4 =
 * Added GitHub Releases update discovery and SHA-256 package verification.
 * Added shared stable, beta and alpha update channel controls.
 

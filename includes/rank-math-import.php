@@ -38,8 +38,8 @@ function emseo_rank_math_post_ids() {
 	$keys = array_map( function( $key ) { return 'rank_math_' . $key; }, array_values( emseo_rank_math_source_keys() ) );
 	$keys[] = 'rank_math_robots';
 	$placeholders = implode( ',', array_fill( 0, count( $keys ), '%s' ) );
-	$sql = "SELECT DISTINCT post_id FROM {$wpdb->postmeta} WHERE meta_key IN ({$placeholders})";
-	return array_map( 'absint', $wpdb->get_col( $wpdb->prepare( $sql, $keys ) ) );
+	$sql = $wpdb->prepare( "SELECT DISTINCT post_id FROM {$wpdb->postmeta} WHERE meta_key IN ({$placeholders})", $keys ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Placeholders are generated internally for a fixed key list.
+	return array_map( 'absint', $wpdb->get_col( $sql ) ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Query is prepared directly above; result is migration discovery data.
 }
 
 function emseo_rank_math_stats() {

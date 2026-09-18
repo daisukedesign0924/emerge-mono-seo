@@ -3,7 +3,7 @@
  * Plugin Name:       Emerge Mono SEO
  * Plugin URI:        https://github.com/daisukedesign0924/emerge-mono-seo
  * Description:       SEO・MEO・LLMO・AIOを一体管理し、Emerge Monoシリーズと深く連携する拡張プラグイン。
- * Version:           0.5.3
+ * Version:           0.5.4
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            DAISUKE DESIGN
@@ -13,7 +13,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'EMSEO_VERSION', '0.5.3' );
+define( 'EMSEO_VERSION', '0.5.4' );
 define( 'EMSEO_FILE', __FILE__ );
 define( 'EMSEO_PATH', plugin_dir_path( __FILE__ ) );
 define( 'EMSEO_URL', plugin_dir_url( __FILE__ ) );
