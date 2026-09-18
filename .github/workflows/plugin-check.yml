@@ -1,0 +1,37 @@
+name: Plugin Check
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  plugin-check:
+    name: WordPress Plugin Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Prepare distribution candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/emerge-mono-seo
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='build' \
+            --exclude='dist' \
+            --exclude='tests' \
+            ./ build/emerge-mono-seo/
+      - name: Run official WordPress Plugin Check
+        uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: './build/emerge-mono-seo'
+          # GitHub Releases is this plugin's official distribution channel.
+          # The updater check only applies to WordPress.org-hosted plugins.
+          exclude-checks: 'plugin_updater'

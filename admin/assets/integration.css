@@ -1,0 +1,28 @@
+/* Series shell owns the WordPress content gutter when Journal is active. */
+body.toplevel_page_emerge-mono-seo.emono-shell-active #wpcontent {
+	padding-left: 20px !important;
+}
+
+body.toplevel_page_emerge-mono-seo.emono-shell-active .emseo-wrap {
+	min-height: calc(100vh - 32px);
+}
+
+/* Coreが有効なら、Journalの有無にかかわらずCoreの共通レール内へ表示する。 */
+body.toplevel_page_emerge-mono-seo .emcore-shell .emseo-wrap {
+	min-height: auto;
+	padding: 24px 34px 80px;
+	background: transparent;
+}
+
+body.toplevel_page_emerge-mono-seo .emcore-shell .emseo-head {
+	padding-top: 8px;
+}
+
+@media screen and (max-width: 782px) {
+	body.toplevel_page_emerge-mono-seo.emono-shell-active #wpcontent {
+		padding-left: 10px !important;
+	}
+	body.toplevel_page_emerge-mono-seo .emcore-shell .emseo-wrap {
+		padding: 18px 14px 60px;
+	}
+}

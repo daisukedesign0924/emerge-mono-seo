@@ -1,0 +1,20 @@
+.emseo-media-field {
+	display: grid !important;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 8px;
+	align-items: center;
+	margin: 0 !important;
+}
+
+.emseo-media-field .button {
+	min-height: 38px;
+	white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+	.emseo-media-field { grid-template-columns: 1fr; }
+}
+.emseo-post-fields{display:grid;gap:16px}.emseo-post-fields label{display:grid;gap:7px}.emseo-post-fields input,.emseo-post-fields textarea,.emseo-post-fields select{width:100%}.emseo-post-fields .emseo-inline{display:flex;align-items:center;gap:8px}.emseo-post-fields .emseo-inline input{width:auto}
+.emseo-audit-head{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.12);font-size:11px;letter-spacing:.14em}.emseo-audit-head span{font-size:32px;line-height:1}.emseo-audit-head small{font-size:11px;opacity:.45}.emseo-serp{padding:16px;border:1px solid rgba(255,255,255,.11);border-radius:10px;background:#0a0b0c;display:grid;gap:5px}.emseo-serp small{color:#aaa}.emseo-serp b{color:#8ab4f8;font-size:17px}.emseo-serp p{margin:0;color:#bdc1c6;line-height:1.55}.emseo-audit-list{display:flex;flex-wrap:wrap;gap:7px}.emseo-audit-list span{border:1px solid rgba(255,255,255,.12);padding:6px 8px;border-radius:99px;font-size:11px}.emseo-audit-list i{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:6px;background:#f4a261}.emseo-audit-list .ok i{background:#54e68b}.emseo-field-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid rgba(255,255,255,.14)}.emseo-field-tabs button{border:0;background:none;color:#888;padding:11px 4px;cursor:pointer;border-bottom:2px solid transparent}.emseo-field-tabs button.on{color:#fff;border-color:#fff}.emseo-field-section{display:none;gap:14px}.emseo-field-section.on{display:grid}.emseo-ai-note{opacity:.5}.emseo-ai-result{padding:14px;border:1px solid rgba(84,230,139,.35);border-radius:10px;background:rgba(84,230,139,.05)}.emseo-suggestion{padding:12px 0;border-top:1px solid rgba(255,255,255,.1)}.emseo-suggestion p{white-space:pre-wrap;line-height:1.6}.emseo-empty-note{opacity:.65}.emseo-steps{display:grid;gap:12px;padding-left:22px;line-height:1.6}.emseo-page-modal-card{max-height:88vh;overflow:auto}.emseo-page-modal-card .emseo-post-fields{margin-top:18px}.emseo-embedded .emseo-serp{font-size:12px}.emseo-embedded .emseo-serp b{font-size:14px}
+@media(max-width:782px){.emseo-field-tabs{position:sticky;top:0;background:#101112;z-index:2}.emseo-audit-list{display:grid;grid-template-columns:1fr 1fr}}
+.emseo-post-fields.is-compact{grid-template-columns:minmax(0,1fr)!important;min-width:0;width:100%;overflow:hidden}.emseo-post-fields.is-compact>*{grid-column:1/-1!important;min-width:0;max-width:100%;box-sizing:border-box}.emseo-post-fields.is-compact .emseo-serp,.emseo-post-fields.is-compact input,.emseo-post-fields.is-compact textarea,.emseo-post-fields.is-compact select{min-width:0;max-width:100%;box-sizing:border-box}.emseo-post-fields.is-compact .emseo-serp b,.emseo-post-fields.is-compact .emseo-serp p,.emseo-post-fields.is-compact small{overflow-wrap:anywhere;word-break:break-word}.emseo-post-fields.is-compact .emseo-field-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.emseo-post-fields.is-compact .emseo-field-tabs button{min-width:0;white-space:normal;font-size:11px;line-height:1.35}
