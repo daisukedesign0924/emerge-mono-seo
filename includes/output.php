@@ -59,7 +59,10 @@ function emseo_head_markup( $seed = array() ) {
 	return $out;
 }
 
-add_action( 'wp_head', function(){ echo emseo_head_markup(); }, 1 );
+add_action( 'wp_head', function(){
+	// Output is assembled exclusively with context-specific escaping in emseo_head_markup().
+	echo emseo_head_markup(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}, 1 );
 add_action( 'wp', function(){
 	if(emseo_setting('enabled')==='1'&&!emseo_has_competing_plugin()){
 		remove_action('wp_head','rel_canonical');

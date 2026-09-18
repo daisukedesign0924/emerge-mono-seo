@@ -1,4 +1,4 @@
-# Emerge Mono SEO 0.5.2
+# Emerge Mono SEO 0.5.3
 
 SEO, MEO, LLMO and AIO management for the Emerge Mono WordPress family.
 

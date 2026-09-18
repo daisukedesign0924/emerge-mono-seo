@@ -10,13 +10,13 @@ add_action('template_redirect',function(){
 	if(!get_query_var('emseo_llms')&&untrailingslashit($request_path)!==untrailingslashit($llms_path))return;
 	if(emseo_setting('llms_enabled')!=='1'){status_header(404);exit;}
 	header('Content-Type: text/plain; charset=utf-8');header('X-Robots-Tag: index, follow');
-	$name=get_bloginfo('name');echo '# '.$name."\n\n> ".emseo_setting('ai_summary',get_bloginfo('description'))."\n\n";
-	echo 'Canonical site: '.home_url('/')."\nLanguage: ".get_bloginfo('language')."\n";
-	$expertise=emseo_lines(emseo_setting('expertise'));if($expertise)echo "\n## Expertise\n\n- ".implode("\n- ",$expertise)."\n";
+	$name=get_bloginfo('name');echo esc_html( '# '.$name."\n\n> ".emseo_setting('ai_summary',get_bloginfo('description'))."\n\n" );
+	echo esc_html( 'Canonical site: '.home_url('/')."\nLanguage: ".get_bloginfo('language')."\n" );
+	$expertise=emseo_lines(emseo_setting('expertise'));if($expertise)echo esc_html( "\n## Expertise\n\n- ".implode("\n- ",$expertise)."\n" );
 	$types=get_post_types(array('public'=>true),'names');unset($types['attachment']);
 	$posts=get_posts(array('post_type'=>array_values($types),'post_status'=>'publish','posts_per_page'=>50,'orderby'=>'modified','order'=>'DESC'));
-	if($posts){echo "\n## Main content\n\n";foreach($posts as $p)echo '- ['.wp_strip_all_tags(get_the_title($p)).']('.get_permalink($p).'): '.emseo_clean_excerpt($p)."\n";}
-	echo "\n## Discovery\n\n- [XML Sitemap](".home_url('/wp-sitemap.xml').")\n";
+	if($posts){echo "\n## Main content\n\n";foreach($posts as $p)echo esc_html( '- ['.wp_strip_all_tags(get_the_title($p)).']('.get_permalink($p).'): '.emseo_clean_excerpt($p)."\n" );}
+	echo esc_html( "\n## Discovery\n\n- [XML Sitemap](".home_url('/wp-sitemap.xml').")\n" );
 	exit;
 });
 add_filter('robots_txt',function($output,$public){

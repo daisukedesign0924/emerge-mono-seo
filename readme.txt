@@ -1,6 +1,6 @@
 === Emerge Mono SEO ===
 Contributors: emergemono
-Stable tag: 0.5.2
+Stable tag: 0.5.3
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -13,7 +13,7 @@ SEO・MEO・LLMO・AIOを一体管理するEmerge Monoシリーズの無料拡�
 
 == Changelog ==
 
-= 0.5.2 =
+= 0.5.3 =
 * Added GitHub Releases update discovery and SHA-256 package verification.
 * Added shared stable, beta and alpha update channel controls.
 
